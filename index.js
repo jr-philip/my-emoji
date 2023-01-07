@@ -10,5 +10,10 @@ for(let i = 0; i<myEmoji.length;i++){
 const emojiBtn = document.getElementById("emoji-btn")
 emojiBtn.addEventListener("click", function(){
     const emojiInput = document.getElementById("emoji-input")
-    console.log(emojiInput.value)
+    if (emojiInput.value){
+        myEmoji.push(emojiInput.value)
+        emojiInput.value = ""
+        console.log(emojiInput.value)
+    }
+
 })
